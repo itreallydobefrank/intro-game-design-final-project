@@ -6,6 +6,13 @@ TagManager:
   tags:
   - Fire
   - Coin
+  - Fruit
+  - Pear
+  - Orange
+  - Apple
+  - Super Fruit
+  - Fries
+  - Pizza
   layers:
   - Default
   - TransparentFX
