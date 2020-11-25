@@ -53,5 +53,13 @@ public class CountFruit : MonoBehaviour
             health -= 15;
             countHealth.text = "Health: " + health.ToString();
         }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Debug.Log("Collision with Enemy");
+            health -= 15;
+            if (health < 0) health = 0;
+            countHealth.text = "Health: " + health.ToString();
+        }
     }
 }

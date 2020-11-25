@@ -20,12 +20,19 @@ public class EnemyAI : MonoBehaviour
 
     AudioSource myaudio;
 
+    //Explosion Effect
+    public GameObject effectObject;
+    ParticleSystem explosion;
+    bool explosionStarted = false;
+
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindWithTag("Player");
         agent = this.GetComponent<NavMeshAgent>();
         myaudio = GetComponent<AudioSource>();
+
+        explosion = effectObject.transform.GetComponent<ParticleSystem>();
 
     }
 
@@ -90,6 +97,8 @@ public class EnemyAI : MonoBehaviour
             foreach (Renderer c in allRenderers) c.enabled = false;
             Collider[] allColliders = gameObject.GetComponentsInChildren<Collider>();
             foreach (Collider c in allColliders) c.enabled = false;
+            effectObject.GetComponent<ParticleSystemRenderer>().enabled = true;
+            StartExplosion();
             StartCoroutine(PlayAndDestroy(myaudio.clip.length));
         }
 
@@ -98,8 +107,22 @@ public class EnemyAI : MonoBehaviour
     {
         myaudio.Play();
         yield return new WaitForSeconds(waitTime);
+        StopExplosion();
         Destroy(gameObject);
     }
 
+    private void StartExplosion()
+    {
+        if (explosionStarted == false)
+        {
+            explosion.Play();
+            explosionStarted = true;
+        }
+    }
+    private void StopExplosion()
+    {
+        explosionStarted = false;
+        explosion.Stop(true, ParticleSystemStopBehavior.StopEmittingAndClear);
+    }
 
 }
