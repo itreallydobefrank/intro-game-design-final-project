@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
+
 [RequireComponent(typeof(AudioSource))]
 public class BulletScript : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class BulletScript : MonoBehaviour
     public float BulletForce = 100.0f;
     //Destroy time
     public float destroyTime = 3.0f;
+
 
     AudioSource myaudio;
 
@@ -37,4 +39,5 @@ public class BulletScript : MonoBehaviour
             Destroy(currentBullet, destroyTime);
         }
     }
+
 }
