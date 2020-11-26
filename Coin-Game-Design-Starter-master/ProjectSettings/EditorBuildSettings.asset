@@ -4,5 +4,20 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/HomeScreen.unity
+    guid: 68bc6f5e3afcc1d45b2be244a976b79d
+  - enabled: 1
+    path: Assets/Scenes/Fruit Hunter First Person.unity
+    guid: 7f2d1f6d70f1d674d99546ab19b9e9ec
+  - enabled: 1
+    path: Assets/Scenes/EndScreen.unity
+    guid: 72ec449f00809bf459eb0da675b6e87f
+  - enabled: 1
+    path: Assets/Scenes/GameOverScreen.unity
+    guid: 63f6262b35e3de940a567952527c883a
+  - enabled: 1
+    path: Assets/Scenes/Fruit Hunter Third Person.unity
+    guid: 95cd35dd719df4a4e8278116c72b4054
   m_configObjects: {}

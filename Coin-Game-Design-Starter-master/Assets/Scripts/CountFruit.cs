@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class CountFruit : MonoBehaviour
 {
@@ -61,5 +62,24 @@ public class CountFruit : MonoBehaviour
             if (health < 0) health = 0;
             countHealth.text = "Health: " + health.ToString();
         }
+        if (health >= 200)
+        {
+            WinGame();
+        }
+        void WinGame()
+        {
+            SceneManager.LoadScene("EndScreen");
+        }
+
+
+        if (health <= 0)
+        {
+            EndGame();
+        }
+        void EndGame()
+        {
+            SceneManager.LoadScene("GameOverScreen");
+        }
+
     }
 }

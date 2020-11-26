@@ -5665,9 +5665,8 @@ GameObject:
   - component: {fileID: 7240956347602303430}
   - component: {fileID: 7240956347592762223}
   - component: {fileID: 7240956347592762222}
-  - component: {fileID: 1933854358}
   - component: {fileID: 3041355410471573324}
-  - component: {fileID: 647280413}
+  - component: {fileID: 9128203358149619007}
   m_Layer: 0
   m_Name: New Enemy
   m_TagString: Enemy
@@ -5748,21 +5747,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &1933854358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7240956347592926546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b5c3a4664a083dc47bef271e75307155, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  chaseDistance: 30
-  stoppingDistance: 5
-  effectObject: {fileID: 259967928}
 --- !u!82 &3041355410471573324
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5773,7 +5757,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5743376b5f326b245b88c5d093860725, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 1613503ef4caf7142a76d3a609edd6dd, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5859,7 +5843,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &647280413
+--- !u!114 &9128203358149619007
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5871,9 +5855,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5c3a4664a083dc47bef271e75307155, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chaseDistance: 30
-  stoppingDistance: 5
-  effectObject: {fileID: 0}
+  chaseDistance: 20
 --- !u!1 &7240956347592928080
 GameObject:
   m_ObjectHideFlags: 0
